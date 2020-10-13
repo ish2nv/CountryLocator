@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	  <meta charset="UTF-8">
+      <meta name="author" content="Shah Ishtiyaq Ali">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Shahs Map</title>
+  <link rel="icon" href="lib/userMarker/img/bluedot.png">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="lib/myCSS.css">
+<link rel="stylesheet" type="text/css" href="lib/L.Control.Sidebar.css">
+<link rel="stylesheet" type="text/css" href="lib/easybtn/easy-button.css">
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+<link rel="stylesheet" type="text/css" href="lib/userMarker/leaflet.usermarker.css">
+<link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet-beautify-marker-icon.css">
+    <script src="https://kit.fontawesome.com/6008153761.js" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+  <script src="lib/L.Control.Sidebar.js"></script>
+  <script src="lib/easybtn/easy-button.js"></script>
+    <script src ="lib/userMarker/leaflet.usermarker.js"></script>
+    <script src ="lib/userMarker/leaflet.usermarker.js"></script>
+    <script src ="lib/leaflet/leaflet-beautify-marker-icon.js"></script>
+</head>
+<body>
+	    <header>
+  <!-- Fixed navbar -->
+
+ <nav id = "sidenav" class="navbar navbar-expand-sm fixed-top navbar-light">
+    <div class="container">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar1">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">IA</a>
+        <div class="collapse navbar-collapse" id="navbar1">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Map</a>
+                </li>
+                     </ul> </div> </div></nav>
+</header>
+<div id="sidebar">
+	<img id = "countryflag">
+	<br>
+	<button class="btn btn-primary hBack" type="button" onclick="backClick()" >Back</button>
+	<br><br>    <br>
+
+<div id="countryinformationdetailed">
+    <h1>Country info</h1>
+      <ul class="list-group">   
+    <li id ="country1" class="list-group-item"></li>
+    <li id ="Capital1" class="list-group-item"></li>
+    <li id ="population1" class="list-group-item"></li>
+     <li id ="Currency1" class="list-group-item"></li>
+    <li id ="Language1" class="list-group-item"></li>
+    <li id ="CallingCode1" class="list-group-item"></li>
+    </ul>
+</div>
+    <br>
+    <h1>Location</h1>
+     <ul class="list-group">
+    <li id ="currentLocation" class="list-group-item"></li>
+     <li id ="nearByStreets" class="list-group-item"></li>
+    <li id ="latitude20" class="list-group-item"></li>
+    <li id ="longitude20" class="list-group-item"></li>
+</ul>
+    <br>
+
+<div id= "CurrentWeatherInfo">
+    <h1>Weather</h1>
+    <ul class="list-group">
+    <li id ="CurrentWeather" class="list-group-item"></li>
+     <li id ="feelsLikeWeather" class="list-group-item"></li>
+      <li id ="minWeather" class="list-group-item"></li>
+     <li id ="maxWeather" class="list-group-item"></li>
+    <li id ="WeatherDescription" class="list-group-item"></li>
+    <li id ="humidity" class="list-group-item"></li>
+    <li id ="windspeed" class="list-group-item"></li>
+</ul>
+</div>
+
+<div id = "weatherForecast">
+	<h1>Weather forecast</h1>
+</div>
+<div id = "CurrencyExchange">
+	<h1>Currency exchange</h1>
+</div>
+<div id = "WikipediaLinks" class="list-group">
+	<h1>Related links</h1>
+</div>
+</div>
+
+	 <div id="mapid"></div>
+<footer>
+    <p>© Shah Ali 2020. All Rights Reserved.</p>
+</footer>
+<script type="text/javascript" src="lib/myScript.js"></script>
+		<script type="application/javascript" src="lib/jquery-2.2.3.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
