@@ -1,7 +1,7 @@
 <?php
   ini_set("display_errors",'On');
        error_reporting(E_ALL);
-$url = "https://shahali.org/lib/countries/countries_small.geo.json";
+$url = "https://shahali.org/lib/countries/countries_large.geo.json";
 
 $my_cURL = curl_init();
 curl_setopt($my_cURL, CURLOPT_SSL_VERIFYPEER, false);
@@ -17,7 +17,7 @@ curl_setopt($my_cURL, CURLOPT_URL,$url);
 	$decode = json_decode($result,true);	
 
 	for($i = 0; $i < count($decode['features']);$i++) {
-		if($decode['features'][$i]['properties']["name"] == $_REQUEST['countryname']) {   //try with countrycode
+		if($decode['features'][$i]['properties']["ADMIN"] == $_REQUEST['countryname']) {   //try with countrycode
 
 			$decode = $decode['features'][$i];
 			break;

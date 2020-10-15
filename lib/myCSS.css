@@ -155,3 +155,38 @@ src:url("olympiccarrierhalf.ttf"),
     url('olympiccarrierhalf.woff');
 
 }
+
+.btn {
+  position: relative;
+  margin-left: 50px;
+  background-color: #3CB371;
+
+}
+
+.dropdown-menu {
+  background-color: #3CB371;
+  max-height: 220px;
+  min-height: 50px;
+  min-width: 300px;
+  max-width: 500px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+
+.dropdown-item:hover {
+  background-color: #666666;
+}
+
+@media only screen and (max-width: 740px) {
+
+.btn {
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+
+}
+
+
+
+}

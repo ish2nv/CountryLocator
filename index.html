@@ -2,11 +2,10 @@
 <html>
 <head>
 	  <meta charset="UTF-8">
-      <meta name="author" content="Shah Ishtiyaq Ali">
+       <meta name="author" content="Shah Ishtiyaq Ali">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Shahs Map</title>
+  <title>Shahs Map</title>
   <link rel="icon" href="lib/userMarker/img/bluedot.png">
-
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="lib/myCSS.css">
 <link rel="stylesheet" type="text/css" href="lib/L.Control.Sidebar.css">
@@ -38,11 +37,14 @@
         </button>
         <a class="navbar-brand" href="index.html">IA</a>
         <div class="collapse navbar-collapse" id="navbar1">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Map</a>
-                </li>
-                     </ul> </div> </div></nav>
+           <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Countries
+  </button>
+  <div id = "myCustomDropDown" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item">Loading...</a>
+  </div>
+</div> </div> </div></nav>
 </header>
 <div id="sidebar">
 	<img id = "countryflag">
@@ -62,6 +64,7 @@
     </ul>
 </div>
     <br>
+    <div id = "theLocation">
     <h1>Location</h1>
      <ul class="list-group">
     <li id ="currentLocation" class="list-group-item"></li>
@@ -69,6 +72,7 @@
     <li id ="latitude20" class="list-group-item"></li>
     <li id ="longitude20" class="list-group-item"></li>
 </ul>
+</div>
     <br>
 
 <div id= "CurrentWeatherInfo">
@@ -99,9 +103,10 @@
 <footer>
     <p>© Shah Ali 2020. All Rights Reserved.</p>
 </footer>
-<script type="text/javascript" src="lib/myScript.js"></script>
-		<script type="application/javascript" src="lib/jquery-2.2.3.min.js"></script>
+    <script type="application/javascript" src="lib/jquery-2.2.3.min.js"></script>
+
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="lib/myScript.js"></script>
 
 </body>
 </html>
