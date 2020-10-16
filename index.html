@@ -7,8 +7,8 @@
   <title>Shahs Map</title>
   <link rel="icon" href="lib/userMarker/img/bluedot.png">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="lib/myCSS.css">
-<link rel="stylesheet" type="text/css" href="lib/L.Control.Sidebar.css">
+<link rel="stylesheet" type="text/css" href="lib/css/myCSS.css">
+<link rel="stylesheet" type="text/css" href="lib/sidebar/L.Control.Sidebar.css">
 <link rel="stylesheet" type="text/css" href="lib/easybtn/easy-button.css">
  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
@@ -20,7 +20,7 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
    crossorigin=""></script>
-  <script src="lib/L.Control.Sidebar.js"></script>
+  <script src="lib/sidebar/L.Control.Sidebar.js"></script>
   <script src="lib/easybtn/easy-button.js"></script>
     <script src ="lib/userMarker/leaflet.usermarker.js"></script>
     <script src ="lib/userMarker/leaflet.usermarker.js"></script>
@@ -38,12 +38,13 @@
         <a class="navbar-brand" href="index.html">IA</a>
         <div class="collapse navbar-collapse" id="navbar1">
            <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Countries
-  </button>
-  <div id = "myCustomDropDown" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item">Loading...</a>
-  </div>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <select id = "myCustomDropDown" class="dropdownmenu2" onchange="onClickLink(value);">
+          <option selected class= "dropdownitem3">Loading...</option>
+        </select>
+      </li>
+    </ul>
 </div> </div> </div></nav>
 </header>
 <div id="sidebar">
@@ -103,10 +104,10 @@
 <footer>
     <p>© Shah Ali 2020. All Rights Reserved.</p>
 </footer>
-    <script type="application/javascript" src="lib/jquery-2.2.3.min.js"></script>
+    <script type="application/javascript" src="lib/js/jquery-2.2.3.min.js"></script>
 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="lib/myScript.js"></script>
+<script type="text/javascript" src="lib/js/myScript.js"></script>
 
 </body>
 </html>

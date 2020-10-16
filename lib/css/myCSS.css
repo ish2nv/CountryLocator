@@ -148,45 +148,33 @@ color: white;
 @font-face {
 
 font-family: olympiccarrierhalfimport;
-src:url("olympiccarrierhalf.ttf"),
-    url("olympiccarrierhalf.eot"),
-    url('olympiccarrierhalf.eot?#iefix') format('embedded-opentype'),
-    url('olympiccarrierhalf.woff2'),
-    url('olympiccarrierhalf.woff');
+src:url("../font/olympiccarrierhalf.ttf"),
+    url("../font/olympiccarrierhalf.eot"),
+    url('../font/olympiccarrierhalf.eot?#iefix') format('embedded-opentype'),
+    url('../font/olympiccarrierhalf.woff2'),
+    url('../font/olympiccarrierhalf.woff');
 
 }
 
-.btn {
-  position: relative;
-  margin-left: 50px;
+
+#sidenav ul li select
+{
   background-color: #3CB371;
+  color: white;
+  padding: 10px;
+}
+#sidenav .navbar-nav li:hover
+{
+  background-color: transparent;
 
 }
-
-.dropdown-menu {
-  background-color: #3CB371;
-  max-height: 220px;
-  min-height: 50px;
-  min-width: 300px;
-  max-width: 500px;
-  overflow-x: hidden;
-  overflow-y: scroll;
-}
-
-
-.dropdown-item:hover {
-  background-color: #666666;
-}
-
 @media only screen and (max-width: 740px) {
 
-.btn {
-  margin: auto;
+.dropdownmenu2  {
   width: 100%;
+  margin: auto;
   padding: 10px;
 
 }
-
-
 
 }
