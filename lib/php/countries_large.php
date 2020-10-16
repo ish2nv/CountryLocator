@@ -3,31 +3,20 @@
        error_reporting(E_ALL);
 $url = "https://shahali.org/lib/countries/countries_large.geo.json";
 
-$my_cURL = curl_init();
-curl_setopt($my_cURL, CURLOPT_SSL_VERIFYPEER, false);
-curl_setopt($my_cURL, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($my_cURL, CURLOPT_URL,$url);
+$countryData = json_decode(file_get_contents($url), true);
+	$output['data'] = [];
+	$output['data2'] = [];
+	$output['data3'] = [];
 
-
-
-	$result=curl_exec($my_cURL);
-
-	curl_close($my_cURL);
-
-	$decode = json_decode($result,true);	
-
-	for($i = 0; $i < count($decode['features']);$i++) {
-		if($decode['features'][$i]['properties']["ADMIN"] == $_REQUEST['countryname']) {   //try with countrycode
-
-			$decode = $decode['features'][$i];
-			break;
-		}
-
+	for($i = 0; $i < count($countryData['features']);$i++) {
+			array_push($output['data'], $countryData['features'][$i]['properties']['ADMIN']);	
+	if($output['data'][$i] == $_REQUEST['countryname']) {   //try with countrycode
+		array_push($output['data2'], $countryData['features'][$i]['geometry']['type']);	
+	array_push($output['data3'], $countryData['features'][$i]['geometry']['coordinates']);	
+	break;
+}
 	}
 
-
-	$output['data'] = $decode['geometry'];
-	
 	header('Content-Type: application/json; charset=UTF-8');
 
 	echo json_encode($output); 
